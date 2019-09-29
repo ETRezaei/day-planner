@@ -1,5 +1,6 @@
 let time = moment().format('HH'); 
-
+let timeCurrent = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("#currentDay").append(timeCurrent);
 
 
 //create 1 row div with 3 columns.
@@ -30,7 +31,7 @@ for(let i = 9; i <= 17; i++){
     if(i < time){
         column2.attr("class", "col-md-8 past");
     }
-    else if(i === time){
+    else if(i == time){
         column2.attr("class", "col-md-8 present");
     }
     else{
